@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="C:\Users\Diovane\Desktop\InternetC\versao2\gpsio\platforms\android\cordova-plugin-background-app\gpsio-background-activity-lib\libs"/></dataSet><dataSet config="debug"><source path="C:\Users\Diovane\Desktop\InternetC\versao2\gpsio\platforms\android\cordova-plugin-background-app\gpsio-background-activity-lib\src\debug\jniLibs"/></dataSet></merger>
