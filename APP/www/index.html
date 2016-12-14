@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link rel="manifest" href="manifest.json">
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/materialize.min.css" rel="stylesheet">
+    
+   
+  </head>
+
+  <body style=" background-color:#fff;">
+    <div class="navbar-fixed z-depth-5">
+      <nav class="nav-extended" style="background-color:#000;">
+        <div class="nav-wrapper">
+          <a href="#!" class="brand-logo">GPS IO 
+              <img src="logo.png" alt="logo" height="30" width="30" style="margin-top: 1px;">
+            </a>
+        </div>
+          <ul class="tabs tabs-transparent">
+            <li class="tab"><a class="active" href="#test1"><i class="icon ion-android-home"></i></a></li>
+            <li class="tab"><a href="#test2"><i class="icon ion-gear-a"></i></a></li>
+          </ul>
+
+        
+      </nav>
+    </div>
+
+  <div id="test1" class="col s12">
+
+    <div class="row" style="margin-top: 20px;">
+      <div class="col" style="padding-top: 25px;">
+        <ul class="list" style="background-color: rgba(183, 181, 181, 0.72);">
+          <li class="item item-toggle item-icon-left">
+             <i class="icon ion-wifi"></i>
+             NETWORK
+             <span class="badge" id="net">
+                    <div style="margin: -8px;margin-left: 10px;">
+                      <div class="preloader-wrapper small active">
+                        <div class="spinner-layer spinner-green-only">
+                          <div class="circle-clipper left">
+                            <div class="circle"></div>
+                          </div><div class="gap-patch">
+                            <div class="circle"></div>
+                          </div><div class="circle-clipper right">
+                            <div class="circle"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+             </span>
+          </li>
+          <br>
+          <li class="item item-toggle item-icon-left">
+             <i class="icon ion-android-locate"></i>
+             COORD.<small id="small_coord" style="font-size: 7pt;margin-left: 5px;">CONECTANDO...</small>
+             <span class="badge" id="coord">
+                    <div style="margin: -8px;margin-left: 10px;">
+                      <div class="preloader-wrapper small active">
+                        <div class="spinner-layer spinner-green-only">
+                          <div class="circle-clipper left">
+                            <div class="circle"></div>
+                          </div><div class="gap-patch">
+                            <div class="circle"></div>
+                          </div><div class="circle-clipper right">
+                            <div class="circle"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+             </span>
+          </li>
+          <li class="item item-toggle" style="background-color: rgba(253, 224, 224, 0.83);">
+              <div class="row" style="margin-bottom: 1px; margin-top: -19px;">
+                <div class="col">Latitude: &nbsp&nbsp ( <span id="latitude">..AGUARDE..</span> ) <i class="icon ion-ios-location-outline"></i></div>
+              </div>
+               <div class="row" style="margin-bottom: -18px;">
+                <div class="col">Longitude: ( <span id="longitude">..AGUARDE..</span> ) <i class="icon ion-ios-location-outline"></i></div>
+              </div>
+          </li>
+          <br>
+          <li class="item item-toggle item-icon-left">
+             <i class="icon ion-android-warning"></i>
+             TERM.<small id="small_disp" style="font-size: 7pt;margin-left: 5px;">BUSCANDO...</small>
+             <span class="badge" id="disp">
+               <div style="margin: -8px;margin-left: 10px;">
+                      <div class="preloader-wrapper small active">
+                        <div class="spinner-layer spinner-green-only">
+                          <div class="circle-clipper left">
+                            <div class="circle"></div>
+                          </div><div class="gap-patch">
+                            <div class="circle"></div>
+                          </div><div class="circle-clipper right">
+                            <div class="circle"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+             </span>
+          </li>
+          <li class="item item-toggle item-icon-left">
+             <i class="icon ion-ios-lightbulb"></i>
+             <div id="disp_texto">..:: AGUARDE ::..</div>
+             <span class="badge" id="disp_icon">
+              <div style="margin: -8px;margin-left: 10px;">
+                      <div class="preloader-wrapper small active">
+                        <div class="spinner-layer spinner-green-only">
+                          <div class="circle-clipper left">
+                            <div class="circle"></div>
+                          </div><div class="gap-patch">
+                            <div class="circle"></div>
+                          </div><div class="circle-clipper right">
+                            <div class="circle"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+             </span>
+          </li>
+          
+
+          
+        </ul>
+      </div>
+    </div>
+
+    </div>
+
+  <div id="test2" class="col s12">
+
+<div class="row" style="margin-top: 20px;">
+      <div class="col" style="padding-top: 25px;">
+
+        <ul class="list" style="background-color: rgba(183, 181, 181, 0.72);">
+
+          <li class="item item-icon-left" id="setar">
+             <i class="icon ion-refresh"></i>
+             Setar Terminal
+             <span class="badge">
+                    <div style="margin: -8px;margin-left: 10px;">
+                    </div>
+             </span>
+          </li>
+          <li class="item item-toggle" style="background-color: rgba(253, 224, 224, 0.83);">
+              <div class="row" style="margin-bottom: 1px; margin-top: -19px;">
+                <div class="col">Latitude Term.: &nbsp&nbsp ( <span id="latitudeSALVO">..AGUARDE..</span> ) <i class="icon ion-pin"></i></div>
+              </div>
+               <div class="row" style="margin-bottom: -18px;">
+                <div class="col">Longitude Term.: ( <span id="longitudeSALVO">..AGUARDE..</span> ) <i class="icon ion-pin"></i></div>
+              </div>
+          </li>
+          <br>
+          <li class="item item-icon-left">
+             <i class="icon ion-android-locate"></i>
+             Sensibilidade
+             <span class="badge" id="sensib">
+                     <div class="preloader-wrapper small active">
+                        <div class="spinner-layer spinner-green-only">
+                          <div class="circle-clipper left">
+                            <div class="circle"></div>
+                          </div><div class="gap-patch">
+                            <div class="circle"></div>
+                          </div><div class="circle-clipper right">
+                            <div class="circle"></div>
+                          </div>
+                        </div>
+                      </div>
+             </span>
+          </li>
+          <li class="item">
+             <div class="row" style="margin-bottom: 1px; margin-top: -19px;">
+                <p>
+                    <input class="with-gap" name="nivel" type="radio" id="nivel1" />
+                    <label for="nivel1" style="padding-left: 25px !important;border-right: 3px #131212 solid;padding-right: 6px;">1</label>
+
+                    <input class="with-gap" name="nivel" type="radio" id="nivel2"/>
+                    <label for="nivel2" style="padding-left: 25px !important;border-right: 3px #131212 solid;padding-right: 6px;">2</label>
+
+                    <input class="with-gap" name="nivel" type="radio" id="nivel3"/>
+                    <label for="nivel3" style="padding-left: 25px !important;border-right: 3px #131212 solid;padding-right: 6px;">3</label>
+
+                    <input class="with-gap" name="nivel" type="radio" id="nivel4"/>
+                    <label for="nivel4" style="padding-left: 25px !important;border-right: 3px #131212 solid;padding-right: 6px;">4</label>
+
+                    <input class="with-gap" name="nivel" type="radio" id="nivel5"/>
+                    <label for="nivel5" style="padding-left: 25px !important;">5</label>
+                </p>
+              </div>
+          </li>
+          <br>
+          <li class="item item-icon-left">
+             <div class="row" style="margin-bottom: 1px; margin-top: -19px;">
+                <div class="col">Sua Lat: &nbsp&nbsp ( <span id="sualat">..AGUARDE..</span> ) <i class="icon ion-ios-location-outline"></i></div>
+              </div>
+               <div class="row" style="margin-bottom: -18px;">
+                <div class="col">Sua Lon: ( <span id="sualong">..AGUARDE..</span> ) <i class="icon ion-ios-location-outline"></i></div>
+              </div>
+          </li>
+          <br>
+          <li class="item item-icon-left">
+             <div class="row" style="margin-bottom: 1px; margin-top: -19px;">
+                <div class="col">Term. Lat.: &nbsp&nbsp ( <span id="termlat">..AGUARDE..</span> ) <i class="icon ion-ios-location-outline"></i></div>
+              </div>
+               <div class="row" style="margin-bottom: -18px;">
+                <div class="col">Term. Lon.: ( <span id="termlong">..AGUARDE..</span> ) <i class="icon ion-ios-location-outline"></i></div>
+              </div>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+
+    
+
+  </div>
+
+
+    
+    <script src="js/jquery.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="cordova.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
