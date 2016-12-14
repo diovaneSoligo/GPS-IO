@@ -1,0 +1,49 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-background-app": {
+            "PACKAGE_NAME": "diovane.gpsio"
+        },
+        "cordova-plugin-chrome-apps-alarms": {
+            "PACKAGE_NAME": "diovane.gpsio"
+        },
+        "cordova-plugin-chrome-apps-notifications": {
+            "PACKAGE_NAME": "diovane.gpsio"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "diovane.gpsio"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "diovane.gpsio"
+        },
+        "cordova-plugin-sqlite": {
+            "PACKAGE_NAME": "diovane.gpsio"
+        },
+        "cordova-plugin-vibration": {
+            "PACKAGE_NAME": "diovane.gpsio"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "diovane.gpsio"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-chrome-apps-common": {
+            "PACKAGE_NAME": "diovane.gpsio"
+        },
+        "cordova-plugin-chrome-apps-storage": {
+            "PACKAGE_NAME": "diovane.gpsio"
+        },
+        "cordova-plugin-chrome-apps-runtime": {
+            "PACKAGE_NAME": "diovane.gpsio"
+        },
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "diovane.gpsio"
+        }
+    }
+}
